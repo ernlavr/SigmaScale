@@ -1,0 +1,17 @@
+python3 run_model_lowrank_replacement.py \
+    --input_model "meta-llama/Llama-3.1-8B-Instruct" \
+    --compressed_model "meta-llama/Llama-3.1-8B-Instruct" \
+    --apply_svd_smoothing \
+    --use_sensitivity_cache='/shared/elavrin/SigmaScale/output_dir/precomputed/meta-llama_Llama-3.1-8B-Instruct_calib_sensitivity_ppl.pt' \
+    --access_token '<HF_TOKEN>' \
+    --train_low_rank_smoothing \
+    --num_epochs 1000 \
+    --model_max_length 2048 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
+    --per_device_eval_batch_size 4 \
+    --model_max_length 2048 \
+    --test_loader_seqlen 2048 \
+    --train_loader_seqlen 2048 \
+    --test_loader_nsamples 256 \
+    --train_loader_nsamples 256 \
