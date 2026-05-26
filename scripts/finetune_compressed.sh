@@ -1,7 +1,7 @@
 # with KD
 python3 run_model_lowrank_replacement.py \
     --input_model "meta-llama/Llama-3.1-8B-Instruct" \
-    --compressed_model "/shared/elavrin/SpinQuant/output_dir/saved_models/sweeps/sweep_gp59ed9g/meta-llama_Llama-3.1-8B-Instruct_3dvdhodm_0.75" \
+    --compressed_model "./output_dir/saved_models/sweeps/sweep_gp59ed9g/meta-llama_Llama-3.1-8B-Instruct_3dvdhodm_0.75" \
     --use_sensitivity_cache='output_dir/precomputed/meta-llama_Llama-3.1-8B-Instruct_calib_sensitivity_ppl.pt' \
     --access_token '<HF_TOKEN>' \
     --fine_tune_after_compression \
@@ -20,7 +20,7 @@ python3 run_model_lowrank_replacement.py \
 # w/o KD
 python3 run_model_lowrank_replacement.py \
     --input_model "meta-llama/Llama-3.1-8B-Instruct" \
-    --compressed_model "/shared/elavrin/SpinQuant/output_dir/saved_models/sweeps/sweep_gp59ed9g/meta-llama_Llama-3.1-8B-Instruct_3dvdhodm_0.75" \
+    --compressed_model "./output_dir/saved_models/sweeps/sweep_gp59ed9g/meta-llama_Llama-3.1-8B-Instruct_3dvdhodm_0.75" \
     --use_sensitivity_cache='output_dir/precomputed/meta-llama_Llama-3.1-8B-Instruct_calib_sensitivity_ppl.pt' \
     --access_token '<HF_TOKEN>' \
     --fine_tune_after_compression \

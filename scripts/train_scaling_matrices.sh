@@ -2,7 +2,7 @@ python3 run_model_lowrank_replacement.py \
     --input_model "meta-llama/Llama-3.1-8B-Instruct" \
     --compressed_model "meta-llama/Llama-3.1-8B-Instruct" \
     --apply_svd_smoothing \
-    --use_sensitivity_cache='/shared/elavrin/SigmaScale/output_dir/precomputed/meta-llama_Llama-3.1-8B-Instruct_calib_sensitivity_ppl.pt' \
+    --use_sensitivity_cache='./output_dir/precomputed/meta-llama_Llama-3.1-8B-Instruct_calib_sensitivity_ppl.pt' \
     --access_token '<HF_TOKEN>' \
     --train_low_rank_smoothing \
     --num_epochs 1000 \
