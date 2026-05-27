@@ -131,7 +131,7 @@ def save_model(model, model_name, checkpoint=None, **kwargs):
         config_dict.pop("model_type", None)
         config_dict["svd_layers_config"] = svd_layers_config
         
-        if model.config.model_type == "qwen":
+        if model.config.model_type == "qwen3":
             print("Detected Qwen model, using SVDQwenConfig.")
             save_config = SVDQwenConfig(**config_dict)
         elif model.config.model_type == "llama":

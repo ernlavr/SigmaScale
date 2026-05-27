@@ -389,6 +389,7 @@ def binary_search_truncation_rank(model, sensitivity_dict, calib_loader, args, t
                             list([layername])
                         )
                 
+                
                 print(f"Training low-rank smoothing for layer {layername} with param ratio {param_ratio}...")
                 svd_linear = SVDLinear.from_linear_with_trained_smoothing(
                     raw_linear,
@@ -397,6 +398,8 @@ def binary_search_truncation_rank(model, sensitivity_dict, calib_loader, args, t
                     layer_name=layername,
                     args=args,
                 )
+                
+                
             else:
                 svd_linear = SVDLinear.from_linear(
                     raw_linear,

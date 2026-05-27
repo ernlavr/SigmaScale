@@ -274,8 +274,8 @@ def process():
         print(f"Compressing student with param ratio target={ptq_args.param_ratio_target}...")    
             
         
-    # uncompressed_ppl, avg_time_per_token = eval_utils.evaluator_single_gpu_simplified(student_model, test_loader, utils.DEV, ptq_args) 
-    # print(f"Uncompressed PPL before low-rank replacement: {uncompressed_ppl:.2f}")
+    uncompressed_ppl, avg_time_per_token = eval_utils.evaluator_single_gpu_simplified(student_model, test_loader, utils.DEV, ptq_args) 
+    print(f"Uncompressed PPL before low-rank replacement: {uncompressed_ppl:.2f}")
     if wandb.run is not None:
         wandb.log({
             "uncompressed/ppl": uncompressed_ppl,
